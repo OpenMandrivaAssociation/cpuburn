@@ -9,6 +9,7 @@ Release: %{release}
 Source: %{name}-%{version}.tar.bz2
 Group: Monitoring
 URL: http://pages.sbcglobal.net/redelm/
+BuildRoot: %{_tmppath}/%{name}-buildroot
 License: GPL
 ExclusiveArch:	%ix86
 

@@ -1,16 +1,16 @@
-%define name cpuburn
-%define version 1.4
-%define release %mkrel 10
+%define	name	cpuburn
+%define version	1.4
+%define	release	%mkrel 11
 
-Name: %{name}
-Summary: CPU testing utilities
-Version: %{version}
-Release: %{release}
-Source: %{name}-%{version}.tar.bz2
-Group: Monitoring
-URL: http://pages.sbcglobal.net/redelm/
-BuildRoot: %{_tmppath}/%{name}-buildroot
-License: GPL
+Name:		%{name}
+Summary:	CPU testing utilities
+Version:	%{version}
+Release:	%{release}
+Source:		%{name}-%{version}.tar.bz2
+Group:		Monitoring
+URL:		http://pages.sbcglobal.net/redelm/
+BuildRoot:	%{_tmppath}/%{name}-buildroot
+License:	GPLv2
 ExclusiveArch:	%ix86
 
 %description

@@ -1,6 +1,6 @@
 %define	name	cpuburn
 %define version	1.4
-%define	release	%mkrel 11
+%define	release	%mkrel 12
 
 Name:		%{name}
 Summary:	CPU testing utilities

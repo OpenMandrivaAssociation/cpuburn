@@ -1,17 +1,17 @@
+%define debug_package	%nil
 %define	name	cpuburn
-%define version	1.4
-%define	release	%mkrel 12
+%define version	1.4a
+%define	release	%mkrel 1
 
 Name:		%{name}
 Summary:	CPU testing utilities
 Version:	%{version}
 Release:	%{release}
-Source:		%{name}-%{version}.tar.bz2
+Source0:	%{name}-%{version}.tar.gz
 Group:		Monitoring
 URL:		http://pages.sbcglobal.net/redelm/
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 License:	GPLv2
-ExclusiveArch:	%ix86
+#ExclusiveArch:	%ix86
 
 %description
 CPU testing utilities in optimized assembler for maximum loading P6 (Intel 
@@ -19,8 +19,6 @@ Pentium Pro, Pentium II, Celeron and Pentium III TM), AMD K6, and P5
 Pentium chips.
 
 %prep
-rm -rf $RPM_BUILD_ROOT
-
 %setup -q
 
 %build
@@ -32,15 +30,10 @@ gcc -s -nostdlib -o burnMMX burnMMX.S
 gcc -s -nostdlib -o burnP5 burnP5.S
 
 %install
-mkdir -p $RPM_BUILD_ROOT%{_bindir}
+mkdir -p %{buildroot}%{_bindir}
 install -m 0755 {burnP6,burnBX,burnK6,burnK7,burnMMX,burnP5} \
-	$RPM_BUILD_ROOT%{_bindir}
-
-%clean
-rm -rf $RPM_BUILD_ROOT 
+	%{buildroot}%{_bindir}
 
 %files 
-%defattr(-,root,root)
 %doc Design README
 %{_bindir}/*
-

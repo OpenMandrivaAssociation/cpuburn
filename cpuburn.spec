@@ -3,7 +3,7 @@
 Summary:	CPU testing utilities
 Name:		cpuburn
 Version:	1.4a
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		Monitoring
 URL:		http://pages.sbcglobal.net/redelm/

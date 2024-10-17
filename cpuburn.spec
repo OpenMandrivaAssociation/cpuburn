@@ -6,7 +6,7 @@ Version:	1.4a
 Release:	3
 License:	GPLv2+
 Group:		Monitoring
-URL:		http://pages.sbcglobal.net/redelm/
+URL:		https://pages.sbcglobal.net/redelm/
 Source0:	%{name}-%{version}.tar.gz
 ExclusiveArch:	%{ix86}
 
